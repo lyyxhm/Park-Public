@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>苏州工业园区公安分局</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.placeholder.min.js"></script>
+</head>
+<body>
+<div class="loginOut white">
+	<div class="middle">
+		<div class="logo"></div>
+		<div class="loginBack">
+			<div class="login">
+				<form action="">
+					<h2>登录</h2>
+					<p>登录名:</p>
+					<div class="inputClo name"><input type="text" name="" value="" placeholder="请输入登录名"></div>
+					<p class="clearfix">登录密码:<a href="javascript:;" class="fr">忘记密码？</a></p>
+					<div class="inputClo lock"><input type="password" name="" value="" placeholder="登录密码"></div>
+					<div class="check">自动登录</div>
+				</form>
+				<input class="loginBtn" type="submit" name="" value="登录">	
+			</div>
+		</div>
+	</div>
+</div>
+<div class="bottom">
+	<p>苏州工业园区公安分局，版权所有@2017. <span></span> 提供技术支持<i>V2.0</i></p>
+</div>
+
+<script type="text/javascript">
+	$(function(){
+		// 自动登录
+		$(".check").click(function(){
+			$(this).toggleClass("checked");
+		});
+
+	    // 占位符兼容ie8开始
+		var $bqtype=$('input[type="text"],input[type="password"],textarea');
+		var len=$bqtype.length;
+		if(len>0){
+
+			$bqtype.each(function(){
+				var placeh=$(this).attr("placeholder");
+				if(typeof(placeh)!="undefined"){
+					$(this).placeholder({customClass:'my-placeholder'});
+				}
+			})
+		}
+		// 占位符兼容ie8结束
+		
+	});
+</script>
+</body>
+</html>
